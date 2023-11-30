@@ -19,16 +19,16 @@ GYM Workout Tracker and reminder
 ###### History 
 ###### Milestones
 
-##### Home
-###### cards/drop down bubbles of workouts (chest, bi, shoulder, ... and so on)
+#### Home
+##### cards/drop down bubbles of workouts (chest, bi, shoulder, ... and so on)
 
-##### Workouts 
-###### make relation between plan and day that it has to be done and show on this page
+#### Workouts 
+##### make relation between plan and day that it has to be done and show on this page
 
-##### History 
-###### Once workout has been completed the log will be saved in database and this page will display all past workouts and its information 
+#### History 
+##### Once workout has been completed the log will be saved in database and this page will display all past workouts and its information 
 
-##### Milestones
-###### record pr option will be given and once a pr is recoreded it will be displayed in the milestones page
+#### Milestones
+##### record pr option will be given and once a pr is recoreded it will be displayed in the milestones page
 
  

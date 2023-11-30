@@ -1,8 +1,7 @@
 // back end file
 // npm i express
-
-
-const express = require('express');
+// node api/index.js to start server
+import express from 'express'
 
 const app = express();
 

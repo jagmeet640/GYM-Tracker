@@ -1,0 +1,25 @@
+{
+  "name": "gym-tracker",
+  "version": "1.0.0",
+  "description": "GYM Workout Tracker and reminder",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jagmeet640/GYM-Tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jagmeet640/GYM-Tracker/issues"
+  },
+  "homepage": "https://github.com/jagmeet640/GYM-Tracker#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1"
+  }
+}

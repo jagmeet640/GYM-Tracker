@@ -2,6 +2,10 @@
 // npm i express
 // node api/index.js to start server
 // nodemon install
+
+// npm run dev to start server on nodemon
+// npm run start to start server on node
+
 import express from 'express'
 
 const app = express();

@@ -11,8 +11,6 @@ export default function Header() {
             <span className='text-yellow-400'>GYM</span>
             <span className='text-black'>TRACKER</span>
           </h1>
-        
-        
           
          <ul className='flex gap-4'>
         

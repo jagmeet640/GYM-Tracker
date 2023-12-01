@@ -9,6 +9,9 @@
 // npm run start to start server on node
 
 
+// run serverside code on a different port as compared to the front end for example run back end on 3001 and front end on 3000 local host simontanously 
+
+
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
@@ -24,6 +27,6 @@ mongoose.connect(process.env.MONGO).then(()=>{
 
 const app = express();
 
-app.listen(3000, () => {
-    console.log('Server is running on port 3000!');
+app.listen(3001, () => {
+    console.log('Server is running on port 3001!');
 });

@@ -16,6 +16,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import userRouter from './routes/user.route.js';
 
 dotenv.config();
 
@@ -37,6 +38,4 @@ app.listen(3001, () => {
 // sends a get request to the '/' path and then expects a response from the client side
 // localhost:3001/test will return hello world
 
-app.get('/test', (req, res)=> {
-    res.send('Hello world');
-})
+app.use('/api/user', userRouter);

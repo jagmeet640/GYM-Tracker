@@ -31,3 +31,12 @@ const app = express();
 app.listen(3001, () => {
     console.log('Server is running on port 3001!');
 });
+
+
+// api route 
+// sends a get request to the '/' path and then expects a response from the client side
+// localhost:3001/test will return hello world
+
+app.get('/test', (req, res)=> {
+    res.send('Hello world');
+})

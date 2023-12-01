@@ -10,6 +10,7 @@
 
 
 // run serverside code on a different port as compared to the front end for example run back end on 3001 and front end on 3000 local host simontanously 
+// when accessing db from front end we will post/get/put data ( we can use axios lib )
 
 
 import express from 'express';

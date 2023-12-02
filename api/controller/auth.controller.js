@@ -15,7 +15,12 @@ export const signup = async (req, res) => {
     const newUser = new User({username, email, password: hashPassword});
     // saving the user info
     // when using await means that wait till the data has been saved we need to change the function to a async function
-    await newUser.save();
-    res.status(201).json("user created success!!!");
+    // try catch block added to handle the error caused in server
+    try{
+        await newUser.save();
+        res.status(201).json("user created success!!!");
+    }catch(error){
+        res.status(500).json(error.message);
+    }
 
 };

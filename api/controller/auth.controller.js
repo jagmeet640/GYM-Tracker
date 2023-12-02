@@ -12,7 +12,7 @@ export const signup = async (req, res) => {
     // need to hash/encryp the password before storing
     const hashPassword = bcryptjs.hashSync(password, 10);
 
-    const newUser = new User({username, email, hashPassword});
+    const newUser = new User({username, email, password: hashPassword});
     // saving the user info
     // when using await means that wait till the data has been saved we need to change the function to a async function
     await newUser.save();

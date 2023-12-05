@@ -4,7 +4,7 @@ import bcryptjs from 'bcryptjs';
 // npm i bcryptjs ~ this is for encrypting the passwords to make it more secure and keep the useres data safe
 
 
-export const signup = async (req, res) => {
+export const signup = async (req, res, next) => {
     // srtoring data from the get req as a const object 
     const {username, email, password} = req.body;
     // now storing this data in the mongodb database
@@ -16,11 +16,14 @@ export const signup = async (req, res) => {
     // saving the user info
     // when using await means that wait till the data has been saved we need to change the function to a async function
     // try catch block added to handle the error caused in server
+
+    // middle ware
+
     try{
         await newUser.save();
         res.status(201).json("user created success!!!");
     }catch(error){
-        res.status(500).json(error.message);
+        // res.status(500).json(error.message);
+        next(error);
     }
-
 };

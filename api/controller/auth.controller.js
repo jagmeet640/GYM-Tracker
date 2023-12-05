@@ -1,5 +1,6 @@
 import User from "../models/user.model.js";
 import bcryptjs from 'bcryptjs';
+import { errorHandler } from "../utils/error.js";
 
 // npm i bcryptjs ~ this is for encrypting the passwords to make it more secure and keep the useres data safe
 
@@ -24,6 +25,7 @@ export const signup = async (req, res, next) => {
         res.status(201).json("user created success!!!");
     }catch(error){
         // res.status(500).json(error.message);
-        next(error);
+        next(error); // sending error from the server
+        // next(errorHandler(550, "error from error handler function"))
     }
 };

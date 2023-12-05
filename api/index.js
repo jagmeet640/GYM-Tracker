@@ -18,6 +18,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import userRouter from './routes/user.route.js';
 import authRouter from './routes/auth.route.js';
+import { createProxyMiddleware } from 'http-proxy-middleware';
 
 dotenv.config();
 
@@ -54,3 +55,11 @@ app.use((err, req, res, next) =>{
         message,
     });
 });
+
+// app.use(
+//     '/api',
+//     createProxyMiddleware({
+//       target: 'http://localhost:3001',
+//       changeOrigin: true,
+//     })
+//   );

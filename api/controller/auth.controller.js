@@ -1,6 +1,7 @@
 import User from "../models/user.model.js";
 import bcryptjs from 'bcryptjs';
 import { errorHandler } from "../utils/error.js";
+import jwt from 'jsonwebtoken';
 
 // npm i bcryptjs ~ this is for encrypting the passwords to make it more secure and keep the useres data safe
 
@@ -28,4 +29,33 @@ export const signup = async (req, res, next) => {
         next(error); // sending error from the server
         // next(errorHandler(550, "error from error handler function"))
     }
+};
+
+export const signin = async (req, res, next) =>{
+
+    const {email, password} = req.body;
+
+
+    try {
+
+        // we import the user model from mongo db and then use the function findOne({item to find}) to search the database to find if email exsists
+        const validUser = await User.findOne({email});
+        if(!validUser) return next(errorHandler(404, 'User not found !'));
+
+        const validPassword = bcryptjs.compareSync(password, validUser.password);
+        if(!validPassword) return next(errorHandler(401, 'Wrong credentials !'));
+
+        // jwt for creating web token in form of hash values // cookies
+        const token = jwt.sign({id: validUser.id}, process.env.JWT_SECRET);
+
+        // the below takes the password out of the object and returns the rest of the object 
+        const {password : pass, ...rest} = validUser._doc;
+
+        // expires to add time out for the cookie
+        res.cookie('access_token', token, {httpOnly: true}).status(200).json(rest);
+
+    } catch (error) {
+        next(error);
+    }
+
 };

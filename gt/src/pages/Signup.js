@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Signup() {
   const [formData, setFormData] = useState({});
+
   const handleChange = (e) => {
     setFormData({
         // for keeping prev info
@@ -10,6 +11,7 @@ function Signup() {
         [e.target.id] : e.target.value,
       });
   };
+  
   console.log(formData);
 
   const handleSubmit = async (e) =>{

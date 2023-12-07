@@ -22,17 +22,20 @@ import { createProxyMiddleware } from 'http-proxy-middleware';
 
 dotenv.config();
 
+// Establishing DB connection through env variable
 mongoose.connect(process.env.MONGO).then(()=>{
     console.log("connected to DB");
     }).catch((err) =>{
         console.log("did not connect");
     });
 
-
+// initialising express app
 const app = express();
 
-app.use(express.json()); // so that our back end server can read json objects
+// so that our back end server can read json objects
+app.use(express.json()); 
 
+// setting up backend server
 app.listen(3001, () => {
     console.log('Server is running on port 3001!');
 });
@@ -56,10 +59,3 @@ app.use((err, req, res, next) =>{
     });
 });
 
-// app.use(
-//     '/api',
-//     createProxyMiddleware({
-//       target: 'http://localhost:3001',
-//       changeOrigin: true,
-//     })
-//   );

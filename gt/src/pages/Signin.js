@@ -1,18 +1,25 @@
 import React, { useState } from 'react'
 import { Link , useNavigate} from 'react-router-dom';
+import {useDispatch, useSelector} from 'react-redux';
+import {signInStart, signInSuccess, signInFaliure} from '../redux/user/userSlice'
 
 function Signin() {
   // usestate o to handle form data
   const [formData, setFormData] = useState({});
 
   // userstate to keep track of errors
-  const [error, setError] = useState(null);
+  // const [error, setError] = useState(null);
 
   // usestate for checking if function has loaded or not
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
+
+  const {loading, error} = useSelector((state) => state.user);
 
   // create an instance of useNavigate to route the user immediately to the sign in page upon a successfull sign up
   const usenavigate = useNavigate();
+
+  // init dispatch
+  const dispatch = useDispatch()
 
   const handleChange = (e) => {
     setFormData({
@@ -27,7 +34,8 @@ function Signin() {
   const handleSubmit = async (e) =>{
 
     try {
-      setLoading(true);
+      // setLoading(true);
+      dispatch(signInStart());
       //  to prevent page from refreshing
       e.preventDefault();
       // fetch request to our auth api to enter details into database 
@@ -41,16 +49,19 @@ function Signin() {
       const data = await res.json();
 
       if(data.sucess === false){
-        setLoading(false);
-        setError(data.message);
+        // setLoading(false);
+        // setError(data.message);
+        dispatch(signInFaliure(data.message));
         return; 
       }
       
       // setting the loading to false as the loading has been completed
-      setLoading(false);
+      // setLoading(false);
 
       // setting the error to null since the sign up was successfull and there no longer needts to be an error so to remove the old error
-      setError(null);
+      // setError(null);
+
+      dispatch(signInSuccess());
 
       console.log(data);
       
@@ -58,8 +69,9 @@ function Signin() {
       usenavigate('/');
       
     } catch (error) {
-      setLoading(false);
-      setError(error.message);
+      // setLoading(false);
+      // setError(error.message);
+      dispatch(signInFaliure(error.message));
     }
    
   }

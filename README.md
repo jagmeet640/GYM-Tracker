@@ -9,25 +9,25 @@ GYM Workout Tracker and reminder
 
 # Back End
 
--- MongoDb for database
---- npm i mongoose
---- npm i dotenv
+- MongoDb for database
+- npm i mongoose
+- npm i dotenv
 
--- install express js
---- npm i express
+- install express js
+- npm i express
 
--- install nodemon for ease of reloading 
---- npm run dev to start back end server
---- npm start to start front end client
+- install nodemon for ease of reloading 
+- npm run dev to start back end server
+- npm start to start front end client
 
 -- Create models in mongoDB database 
---- mongoose.Schema function
---- export that model
+- mongoose.Schema function
+- export that model
 
--- Create backend routes 
---- create backend api path using the express app 
---- create back end api routes by creating functions and associating a path to it
---- test backend apis using 'insomnia' 
+- Create backend routes 
+- create backend api path using the express app 
+- create back end api routes by creating functions and associating a path to it
+- test backend apis using 'insomnia' 
 
 # Server
 

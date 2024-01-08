@@ -3,5 +3,9 @@
 @tailwind utilities;
 
 body{
-    background-color: rgb(219, 219, 214);
+    background-color: rgb(64, 66, 170);
 }
+
+/* .main_home{
+    background-color: blue;
+} */

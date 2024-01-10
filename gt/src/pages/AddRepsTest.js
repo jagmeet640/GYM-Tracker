@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 
-function AddReps() {
+function AddRepsTest() {
   const [counters, setCounters] = useState([{ id: 1, value: 0 }]);
   const uniqueId = uuidv4();
 
@@ -74,5 +74,5 @@ function AddReps() {
   );
 }
 
-export default AddReps;
+export default AddRepsTest;
 

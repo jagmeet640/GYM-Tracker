@@ -15,7 +15,7 @@ function Home() {
       <Link to={'/repsTest'}>
         <button
             id='test-reps-page'
-            className='bg-blue-500 text-white hover:bg-blue-950 font-bold py-1 px-2 rounded text-sm mr-2'
+            className='bg-violet-500 text-white hover:bg-violet-950 font-bold py-1 px-2 rounded text-sm mr-2'
         >
             Log Reps
         </button>
@@ -24,7 +24,7 @@ function Home() {
       <Link to={'/excersiseTest'}>
           <button
               id='test-reps-page'
-              className='bg-blue-500 text-white hover:bg-blue-950 font-bold py-1 px-2 rounded text-sm'
+              className='bg-violet-500 text-white hover:bg-violet-950 font-bold py-1 px-2 rounded text-sm'
           >
               Log Excersise
           </button>

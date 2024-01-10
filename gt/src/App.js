@@ -6,8 +6,9 @@ import Signin from './pages/Signin';
 import Profile from './pages/Profile';
 import Header from './components/Header';
 import Signup from './pages/Signup';
-import AddReps from './pages/AddReps';
 import ExcersiseLogTest from './pages/ExcersiseLogTest';
+import AddRepsTest from './pages/AddRepsTest';
+import RepExcCombTest from './pages/RepExcCombTest';
 
 function App() {
   return <BrowserRouter>
@@ -17,8 +18,9 @@ function App() {
       <Route path='/sign-in' element={<Signin />} />
       <Route path='/sign-up' element={<Signup />} />
       <Route path='/Profile' element={<Profile />} />
-      <Route path= '/repsTest' element={<AddReps/>} />
+      <Route path= '/repsTest' element={<AddRepsTest/>} />
       <Route path='/ExcersiseTest' element={<ExcersiseLogTest/>}/>
+      <Route path='/combTest' element={<RepExcCombTest/>} />
     </Routes>
   
   </BrowserRouter>

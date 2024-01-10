@@ -7,6 +7,12 @@ import { Store, persistor } from './redux/store.js';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 
+// import { Application } from '@splinetool/runtime';
+
+// const canvas = document.getElementById('canvas3d');
+// const app = new Application(canvas);
+// app.load('https://prod.spline.design/RxG4A9HpYebQiKeu/scene.splinecode');
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={Store}>

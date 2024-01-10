@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+
 
 function Home() {
   const [counters, setCounters] = useState([{ id: 1, value: 0 }]);
+  const uniqueId = uuidv4();
 
   const increaseReps = (id) => {
     setCounters((prevCounters) =>
@@ -19,8 +22,11 @@ function Home() {
     );
   };
 
+
   const addCounter = () => {
-    const newCounterId = counters.length + 1;
+
+    // const newCounterId = counters.length + 1;
+    const newCounterId = uniqueId;
     setCounters((prevCounters) => [...prevCounters, { id: newCounterId, value: 0 }]);
   };
 

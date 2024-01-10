@@ -31,7 +31,7 @@ function ExcersiseLogTest() {
                     <button
                         onClick={() => removeExcersise(excersise.id)}
                         className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mb-2 mt-2'
-                    >Remove Excersise</button>
+                    >Remove Excersise</button> 
                 </div>
             ))}
 

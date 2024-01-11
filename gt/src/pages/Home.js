@@ -24,9 +24,18 @@ function Home() {
       <Link to={'/excersiseTest'}>
           <button
               id='test-reps-page'
-              className='bg-violet-500 text-white hover:bg-violet-950 font-bold py-1 px-2 rounded text-sm'
+              className='bg-violet-500 text-white hover:bg-violet-950 font-bold py-1 px-2 rounded text-sm mr-2'
           >
               Log Excersise
+          </button>
+      </Link>
+
+      <Link to={'/combTest'}>
+          <button
+              id='test-reps-page'
+              className='bg-violet-500 text-white hover:bg-violet-950 font-bold py-1 px-2 rounded text-sm'
+          >
+              Comb test
           </button>
       </Link>
         

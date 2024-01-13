@@ -64,7 +64,11 @@ GYM Workout Tracker and reminder
 #### History 
 ##### Once workout has been completed the log will be saved in database and this page will display all past workouts and its information 
 
+#### calender functionality 
+##### create a calender to allow user to associate a plan to a cirtain day or to plan future workouts
+
 #### Milestones
 ##### record pr option will be given and once a pr is recoreded it will be displayed in the milestones page
+##### add a reminder system along with the calender
 
  

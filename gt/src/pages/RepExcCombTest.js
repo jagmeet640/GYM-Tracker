@@ -33,28 +33,45 @@ function RepExcCombTest() {
   }
 
   const uniqueExcersiseId = uuidv4();
-    const [excersises, setExcersise] = useState([{ id: uniqueExcersiseId, excersiseName: '' }]);
+  const [excersises, setExcersise] = useState([{ id: uniqueExcersiseId, excersiseName: '' }]);
 
-    const handleExcersiseNameChange = (e, id) => {
-        setExcersise((prevExcersise) =>
-            prevExcersise.map((excersise) =>
-                excersise.id === id ? { ...excersise, excersiseName: e.target.value } : excersise
-            ));
+  const handleExcersiseNameChange = (e, id) => {
+    setExcersise((prevExcersise) =>
+      prevExcersise.map((excersise) =>
+        excersise.id === id ? { ...excersise, excersiseName: e.target.value } : excersise
+      ));
 
-    };
-    const addExcersiseLog = () => {
-        const newExcersiseId = uniqueExcersiseId;
-        setExcersise((prevExcersise) => [...prevExcersise, { id: newExcersiseId, value: '' }])
-    };
+  };
+  const addExcersiseLog = () => {
+    const newExcersiseId = uniqueExcersiseId;
+    setExcersise((prevExcersise) => [...prevExcersise, { id: newExcersiseId, value: '' }])
+  };
 
-    const removeExcersise = (id) => {
-        setExcersise((prevExcersise) => prevExcersise.filter((excersise) => excersise.id !== id));
-    };
-  
+  const removeExcersise = (id) => {
+    setExcersise((prevExcersise) => prevExcersise.filter((excersise) => excersise.id !== id));
+  };
+
   return (
     <div className='p-8'>
       {counters.map((counter) => (
         <div key={counter.id} className='bg-white p-6 rounded-lg shadow-md mb-4'>
+
+          {excersises.map((excersise) => (
+            <div key={excersise.id}>
+              <div>
+                <input type="text" name="Excersise" value={excersise.excersiseName} onChange={() => handleExcersiseNameChange(excersise.id)} />
+              </div>
+
+              <button
+                onClick={() => removeExcersise(excersise.id)}
+                className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mb-2 mt-2'
+              >Remove Excersise</button>
+            </div>
+          ))}
+
+          <button className='bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-2' onClick={addExcersiseLog}> Add another excersise</button>
+
+
           <div className='text-xl font-bold mb-4'>Excersise #{counter.id} Reps : {counter.value}</div>
           <button
             onClick={() => increaseReps(counter.id)}
@@ -75,32 +92,19 @@ function RepExcCombTest() {
           >
             Remove Counter
           </button>
-          
+
 
         </div>
       ))}
-      {excersises.map((excersise) => (
-                <div key={excersise.id}>
-                    <div>
-                        <input type="text" name="Excersise" value={excersise.excersiseName} onChange={() => handleExcersiseNameChange(excersise.id)} />
-                    </div>
 
-                    <button
-                        onClick={() => removeExcersise(excersise.id)}
-                        className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mb-2 mt-2'
-                    >Remove Excersise</button> 
-                </div>
-            ))}
-
-      <button className='bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-2' onClick={addExcersiseLog}> Add another excersise</button>
       <button
         onClick={addCounter}
         className='bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-2'
       >
         Add Another Counter
       </button>
-      
-      
+
+
     </div>
   )
 }

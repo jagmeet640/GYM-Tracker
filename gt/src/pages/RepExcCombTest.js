@@ -79,12 +79,6 @@ function RepExcCombTest() {
 
         </div>
       ))}
-      <button
-        onClick={addCounter}
-        className='bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-2'
-      >
-        Add Another Counter
-      </button>
       {excersises.map((excersise) => (
                 <div key={excersise.id}>
                     <div>
@@ -98,7 +92,14 @@ function RepExcCombTest() {
                 </div>
             ))}
 
-            <button className='bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-2' onClick={addExcersiseLog}> Add another excersise</button>
+      <button className='bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-2' onClick={addExcersiseLog}> Add another excersise</button>
+      <button
+        onClick={addCounter}
+        className='bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-2'
+      >
+        Add Another Counter
+      </button>
+      
       
     </div>
   )

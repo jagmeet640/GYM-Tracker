@@ -18,8 +18,8 @@ function App() {
       <Route path='/sign-in' element={<Signin />} />
       <Route path='/sign-up' element={<Signup />} />
       <Route path='/Profile' element={<Profile />} />
-      <Route path= '/repsTest' element={<AddRepsTest/>} />
-      <Route path='/ExcersiseTest' element={<ExcersiseLogTest/>}/>
+      {/* <Route path= '/repsTest' element={<AddRepsTest/>} />
+      <Route path='/ExcersiseTest' element={<ExcersiseLogTest/>}/> */}
       <Route path='/combTest' element={<RepExcCombTest/>} />
     </Routes>
   

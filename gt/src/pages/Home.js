@@ -12,7 +12,7 @@ function Home() {
     <div className='p-8'>
       
       
-      <Link to={'/repsTest'}>
+      {/* <Link to={'/repsTest'}>
         <button
             id='test-reps-page'
             className='bg-violet-500 text-white hover:bg-violet-950 font-bold py-1 px-2 rounded text-sm mr-2'
@@ -28,14 +28,14 @@ function Home() {
           >
               Log Excersise
           </button>
-      </Link>
+      </Link> */}
 
       <Link to={'/combTest'}>
           <button
               id='test-reps-page'
               className='bg-violet-500 text-white hover:bg-violet-950 font-bold py-1 px-2 rounded text-sm'
           >
-              Comb test
+              Excersise recorder test
           </button>
       </Link>
         

@@ -20,6 +20,8 @@ GYM Workout Tracker and reminder
 - npm run dev to start back end server
 - npm start to start front end client
 
+
+d
 -- Create models in mongoDB database 
 - mongoose.Schema function
 - export that model

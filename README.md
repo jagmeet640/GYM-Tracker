@@ -71,6 +71,6 @@ d
 
 #### Milestones
 ##### record pr option will be given and once a pr is recoreded it will be displayed in the milestones page
-##### add a reminder system along with the calender
+##### use calenderjs for the calender interface and setting reminders
 
  

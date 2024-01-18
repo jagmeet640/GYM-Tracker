@@ -20,6 +20,8 @@ GYM Workout Tracker and reminder
 - npm run dev to start back end server
 - npm start to start front end client
 
+
+d
 -- Create models in mongoDB database 
 - mongoose.Schema function
 - export that model
@@ -69,6 +71,6 @@ GYM Workout Tracker and reminder
 
 #### Milestones
 ##### record pr option will be given and once a pr is recoreded it will be displayed in the milestones page
-##### add a reminder system along with the calender
+##### use calenderjs for the calender interface and setting reminders
 
  

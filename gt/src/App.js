@@ -9,7 +9,8 @@ import Signup from './pages/Signup';
 import ExcersiseLogTest from './pages/ExcersiseLogTest';
 import AddRepsTest from './pages/AddRepsTest';
 import RepExcCombTest from './pages/RepExcCombTest';
-import Calender from './pages/Calender';
+import Calender from './pages/MyCalender';
+
 
 function App() {
   return <BrowserRouter>
@@ -22,7 +23,7 @@ function App() {
       {/* <Route path= '/repsTest' element={<AddRepsTest/>} />
       <Route path='/ExcersiseTest' element={<ExcersiseLogTest/>}/> */}
       <Route path='/combTest' element={<RepExcCombTest/>} />
-      
+      <Route path='/calender' element={<Calender />} />
     </Routes>
   
   </BrowserRouter>

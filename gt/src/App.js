@@ -10,6 +10,7 @@ import ExcersiseLogTest from './pages/ExcersiseLogTest';
 import AddRepsTest from './pages/AddRepsTest';
 import RepExcCombTest from './pages/RepExcCombTest';
 import Calender from './pages/MyCalender';
+import PersonalRecs from './pages/PersonalRecs';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <Route path='/ExcersiseTest' element={<ExcersiseLogTest/>}/> */}
       <Route path='/combTest' element={<RepExcCombTest/>} />
       <Route path='/calender' element={<Calender />} />
+      <Route path='/PersonalRecs' element={<PersonalRecs />} />
     </Routes>
   
   </BrowserRouter>

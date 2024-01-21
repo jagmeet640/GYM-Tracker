@@ -35,6 +35,12 @@ export default function Header() {
                 </li>
           </Link>
 
+          <Link to={'/PersonalRecs'}>
+              <li className='hidden sm:inline text-slate-700 hover:underline'>
+                  PRs
+              </li>
+          </Link>
+
           <Link to={'/calender'}>
                 <li className='hidden sm:inline text-slate-700 hover:underline'>
                   CALENDER

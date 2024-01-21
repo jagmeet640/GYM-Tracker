@@ -29,6 +29,12 @@ export default function Header() {
                 </li>
           </Link>
 
+          <Link >
+              <li className='hidden sm:inline text-slate-700 hover:underline'>
+                  SIGN UP
+                </li>
+          </Link>
+
           <Link to={'/calender'}>
                 <li className='hidden sm:inline text-slate-700 hover:underline'>
                   CALENDER
